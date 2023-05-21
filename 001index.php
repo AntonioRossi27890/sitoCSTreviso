@@ -53,7 +53,7 @@
         $password=$_POST['Password'];
         if((empty($NumeroContoCorrente)==false)&&(empty($password)==false))
         {
-            $conn=mysqli_connect(localhost,"cartedacollezione","zRDzt9Heg2aw","my_cartedacollezione");
+            $conn=mysqli_connect();
             $strSQL = "SELECT * from TabellaContiCorrenti WHERE NumeroContoCorrente = '$NumeroContoCorrente' and Password = '$password'";
             $query = mysqli_query($conn,$strSQL);
             $numerorecord = mysqli_num_rows($query);
