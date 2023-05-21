@@ -44,7 +44,7 @@
             // esiste la variabile session NumeroContoCorrente
             // do messaggio benvenuto
             $NumeroContoCorrente = $_SESSION['NumeroContoCorrente'];
-            $conn=mysqli_connect(localhost,"cartedacollezione","zRDzt9Heg2aw","my_cartedacollezione");
+            $conn=mysqli_connect();
             $strSQL= "SELECT ContoCorrenteID,Email FROM TabellaContiCorrenti Where NumeroContoCorrente = '$NumeroContoCorrente'";
             $query = mysqli_query($conn,$strSQL);
             $row = mysqli_fetch_assoc($query);
